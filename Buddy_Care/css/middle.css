@@ -1,0 +1,211 @@
+.dogcare::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.dogcare {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 20px 60px;
+	padding-bottom: 70px;
+	border-bottom: 3px solid grey;
+	background: url("../images/abstract.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+.heading{
+	font-family: 'gooddogregular';
+	font-size: 50px;
+	margin: 40px 0 ;
+	color: lightgreen;
+	padding: 10px 2px;
+	border-radius: 100px;
+	-webkit-text-shadow: 0 2px 5px black;
+	-moz-text-shadow: 0 2px 5px black;
+	text-shadow: 0 2px 5px black;
+}
+
+.dog-picture img {
+	width: 100%;
+    display: block;
+    border-radius: 100px;
+    padding: 5px;
+    margin: auto;
+    border: 5px solid white;
+    -webkit-box-shadow: 0 5px 10px black;
+    -moz-box-shadow: 0 5px 10px black;
+    box-shadow: 0 5px 10px black;
+}
+
+.dog-picture img:hover {
+	border-right: 5px solid gold;
+	border-top: 5px solid gold;
+	border-left: 5px solid gold;
+	-webkit-transition: 2s ease;
+	-moz-transition: 2s ease;
+	transition: 2s ease-out;
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+	cursor: pointer;
+}
+
+.dog-picture {
+	background-color: rgba(0, 102, 102, 0.60);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 3px 5px grey;
+	-moz-box-shadow: 0 3px 5px grey;
+	box-shadow: 0 3px 5px grey;
+}
+
+.secondHeading{
+	font-family: 'Cooper Black';
+	font-weight: thin;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	-webkit-text-shadow: 0 3px 5px black;
+	-moz-text-shadow: 0 3px 5px black;
+	text-shadow: 0 3px 5px black;
+}
+
+p.midtext {
+	margin: 30px 0;
+	text-align: justify;
+	font-family: 'verdana';
+	color: black;
+	margin:  20px 10px;
+	padding:  20px 10px;
+	background-color: #ECF0F1;
+	text-indent: 40px;
+	border-radius: 4px;
+}
+
+.button{
+	font-family: 'Century Gothic';
+	font-weight: bold;
+	padding: 5px 10px;
+	background-color: gold;
+	border-radius: 3px ;
+	border:2px solid rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+/*FOR GALLERY*/
+.galleryTab::after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+
+.galleryTab {
+	background: url("../images/blur.jpg") no-repeat center fixed;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	padding: 20px 60px;
+	-webkit-box-shadow: 0 5px 20px black;
+	-moz-box-shadow: 0 5px 20px black;
+	box-shadow: 0 5px 20px black;
+	z-index: 1;
+}
+.videos {
+	position: relative;
+}
+
+.galText-sec {
+	float: left;
+	border: 1px solid green;
+	width: 40px;
+}
+
+.galleryBar img:hover {
+	-webkit-filter: blur(2px);
+	-moz--webkit-filter: blur(2px);
+	filter: blur(2px);
+	-webkit-transition: 1s ease;
+	-moz-transition: 1s ease;
+	transition: all 1s ease;
+	animation-duration: 1s;
+	cursor: pointer;
+	display: block;
+}
+
+.firstDog {
+	padding: 5px;
+	border-radius: 12px;
+}
+
+[target="_videoOne"] {
+	padding-top: 50px;
+	
+}
+
+[target="_videoTwo"] {
+	
+}
+
+.services::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.services {
+	position: relative;
+	width: 100%;
+	padding: 20px 40px;
+	background-color: #0B5345;
+	border-bottom: 1px solid white;
+}
+
+.serviceTab img {
+	display: block;
+	border-radius: 100px;
+	border: 5px solid white;
+	padding: 5px;
+	margin: auto;
+	-webkit-box-shadow: 0 5px 8px black;
+	-moz-box-shadow: 0 5px 8px black;
+	box-shadow: 0 5px 8px black;
+}
+
+.serviceTab img:hover {
+	border-right: 5px solid gold;
+	border-top: 5px solid gold;
+	border-left: 5px solid gold;
+	-webkit-transition: 2s ease-out;
+	-moz-transition: 2s ease-out;
+	transition: 2s ease-out;
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+	cursor: pointer;
+}
+
+.serviceTab {
+	padding: 20px 10px;
+}
+
+p.serviceText {
+	color: white;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 16px;
+	font-family: verdana;
+	padding: 20px;
+}
+
+.buttonTwo {
+	font-family: 'Century Gothic';
+	font-weight: bold;
+	margin: auto;
+	padding: 5px 10px;
+	background-color:  #F1C40F;
+	border-radius: 3px ;
+	border:2px solid white;
+	cursor: pointer;
+}
