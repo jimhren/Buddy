@@ -6,6 +6,7 @@
 body {
 	margin: 0;
 	overflow: auto;
+	position: relative;
 }
 
 
@@ -145,6 +146,7 @@ ul.topnav li.icon {display: none;}
 }
 
 @media only screen and (min-width: 700px){
+
 	#label{ font-size: 60px; 
 		top: 100px;  
 		padding-left: 60px; 
@@ -163,6 +165,11 @@ ul.topnav li.icon {display: none;}
 		transition: 1s ease;}
 	.navbar { height: 620px; }
 	.lorem {font-size: 18px; padding: 0 20px;}
+
+	  .dog-picture img{
+		width: 50px;
+		height: 50px;
+	}
 }
 
 /*Navigation Bar Responsiveness*/
@@ -183,6 +190,8 @@ ul.topnav li.icon {display: none;}
 	height: auto;
 	top: 10%;
   }
+
+
 }
 
 @media screen and (max-width:700px) {

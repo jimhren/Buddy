@@ -21,53 +21,43 @@ function myFunction() {
     }
 }
 
+//NAVIGATION BAR
+</script>
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navHeader", offset: 50});   
 
-/*$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
 });
 
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('#myTopnav a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#myTopnav ul li a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
-}*/
 </script>
 
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<div class="navbar">
-	<div class="navHeader">
+<div class="navbar" id="header">
+	<div class="navHeader" id="myNavbar">
 		<ul class="topnav" id="myTopnav" >
 			<li class="icon">
     			<a href="javascript:void(0);"  class="icon-tab" style="font-size:15px;" onclick="myFunction()"><span class="three">☰</span></a>
@@ -76,10 +66,10 @@ function onScroll(event){
 			<div  class="mylogo col-1 col-m-1">
 			<li><img src="images/mylogo.png"></li> 
 			</div>
-			<li><a href="#" target="_linko">Home</a></li><span class="divLine">|</span>
-			<li><a href="#" target="_linko">Gallery</a></li><span class="divLine">|</span>
-			<li><a href="#" target="_linko">Services</a></li><span class="divLine">|</span>
-			<li><a href="#" target="_linko">About</a></li>
+			<li><a href="#header" target="_linko">Home</a></li><span class="divLine">|</span>
+			<li><a href="#galgal" target="_linko">Gallery</a></li><span class="divLine">|</span>
+			<li><a href="#serv" target="_linko">Services</a></li><span class="divLine">|</span>
+			<li><a href="#meme" target="_linko">Contact Us</a></li>
 		</ul>
 	</div>
 	<div id="label">
@@ -126,14 +116,13 @@ function onScroll(event){
 	</div>
 </div>
 
-<div class="dogcare">
+<div class="dogcare" id="care">
 		<center>
 		<p class="heading"> PET CARE </p>
 		</center>
 		<div class="dog-picture col-4 col-m-6">
 			<p class="secondHeading"> EXERCISING </p>
-			<img src="images/dogs/walking.jpg" style="width: 180px;
-		height: 180px;">
+			<img src="images/dogs/walking.jpg">
 			<p class="midtext">
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				<br/><br/><br/>
@@ -142,8 +131,7 @@ function onScroll(event){
 		</div>
 		<div class="dog-picture col-4 col-m-6" >
 		<p class="secondHeading"> GROOMING </p>
-			<img src="images/dogs/groom.jpg" style="width: 180px;
-		height: 180px;">
+			<img src="images/dogs/groom.jpg">
 			<p class="midtext">
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				<br/><br/><br/>
@@ -152,8 +140,7 @@ function onScroll(event){
 		</div>
 		<div class="dog-picture col-4 col-m-12">
 		<p class="secondHeading"> FEEDING </p>
-			<img src="images/dogs/healthydog.jpg" style="width: 180px;
-		height: 180px;">
+			<img src="images/dogs/healthydog.jpg">
 			<p class="midtext">
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				<br/><br/><br/>
@@ -162,11 +149,14 @@ function onScroll(event){
 		</div>
 </div>
 
-<div class="galleryTab">
+<div class="galleryTab" id="galgal">
 		<center><p class="heading"> GALLERY </p></center>
 	<div class="galleryBar col-6 col-m-6">
 		<div src="" class="col-1"></div>
-		<img src="images/dogs/huskypic.jpg" class="firstDog col-11">	
+		<div class="img-cap">
+		<img src="images/dogs/huskypic.jpg" class="firstDog col-11">
+			<p class="caption"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p>
+		</div>	
 		<img src="images/dogs/rottweiler.jpg" class="firstDog col-5">
 		<img src="images/dogs/pomerian.jpg" class="firstDog col-3">
 		<img src="images/dogs/pitbull.jpg" class="firstDog col-6">
@@ -186,15 +176,13 @@ function onScroll(event){
 </div>
 
 	
-<div class="services" >
+<div class="services" id="serv">
 	<center><p class="heading"> SERVICES </p></center>
 	<div class="serviceTab col-3 col-m-6">
 		<p class="secondHeading"> TRAINING </p>
 		<img src="images/dogs/training.jpg" style="width: 180px; height: 180px;">
 		<p class="serviceText">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-		<br><br><br>
-		<input type="button" value="Contact Us" class="buttonTwo">	
 		</p>
 	</div>
 	<div class="serviceTab col-3 col-m-6">
@@ -202,8 +190,6 @@ function onScroll(event){
 		<img src="images/dogs/vaccine.jpg" style="width: 180px; height: 180px;">
 		<p class="serviceText">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-		<br><br><br>
-		<input type="button" value="Contact Us" class="buttonTwo">	
 		</p>
 	</div>
 	<div class="serviceTab col-3 col-m-6">
@@ -211,8 +197,7 @@ function onScroll(event){
 		<img src="images/dogs/salon.jpg" style="width: 180px; height: 180px;">
 		<p class="serviceText">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-			<br><br><br>
-		<input type="button" value="Contact Us" class="buttonTwo">	
+			
 		</p>
 	</div>
 	<div class="serviceTab col-3 col-m-6">
@@ -220,12 +205,11 @@ function onScroll(event){
 		<img src="images/dogs/accesories.jpg" style="width: 180px; height: 180px;">
 		<p class="serviceText">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-			<br><br><br>
-		<input type="button" value="Contact Us"  class="buttonTwo">	
+		
 		</p>
 	</div>
 </div>
-<div class="footer">
+<div class="footer" id="meme">
 	<div class="footerTab col-3">
 		<p class="headingThree"> ABOUT THE COMPANY </p>
 		<p target="_about">

@@ -28,7 +28,8 @@
 }
 
 .dog-picture img {
-	width: 100%;
+	width: 180px;
+	height: 180px;
     display: block;
     border-radius: 100px;
     padding: 5px;
@@ -37,7 +38,10 @@
     -webkit-box-shadow: 0 5px 10px black;
     -moz-box-shadow: 0 5px 10px black;
     box-shadow: 0 5px 10px black;
+
 }
+
+
 
 .dog-picture img:hover {
 	border-right: 5px solid gold;
@@ -116,11 +120,6 @@ p.midtext {
 	position: relative;
 }
 
-.galText-sec {
-	float: left;
-	border: 1px solid green;
-	width: 40px;
-}
 
 .galleryBar img:hover {
 	-webkit-filter: blur(2px);
@@ -135,12 +134,29 @@ p.midtext {
 }
 
 .firstDog {
+	display: flex;
 	padding: 5px;
 	border-radius: 12px;
 }
 
+.img-cap {
+	position: relative;
+}
+
+.caption {
+	text-align: center;
+	padding: 10px 50px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+	position: absolute;
+
+}
+
 [target="_videoOne"] {
-	padding-top: 50px;
+	padding-top: 51px;
 	
 }
 
